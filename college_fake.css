@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("/Images/banner.png");
+    background-size: auto;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+nav{
+    padding: 2% 4.5%;
+    display: flex;
+    justify-content: space-between;
+}
+nav img{
+    width: 80%;
+}
+.links ul li{
+    display: inline-block;
+    padding: 0px 15px;    
+}
+.links ul li a{
+    text-decoration: none;
+    font-size: 120%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.8px;
+    position: relative;
+}
+.links ul li a::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #f33664;
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+.links ul li a:hover::after{
+    width: 100%;
+}
+
+.txt{
+    width: 90%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* border: 2px solid red; */
+}   
+.txt h1{
+    font-size: 62px;
+}
+.txt p{
+    margin-top: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 18px 0px 22px;
+    letter-spacing: 0.1px;
+}
+.txt-btn{
+    /* display: inline-block; */
+    font-size: 17px;
+    padding: 12px 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+    text-decoration: none;
+}
+.txt-btn:hover{
+    background-color: #b7342a;
+    border: 1px solid #b7342a;
+    transition: 0.8s;
+}

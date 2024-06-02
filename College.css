@@ -1,0 +1,233 @@
+/* Resetting css */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{ 
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)), url(/Images/banner.png);
+    background-size: auto; 
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* Navigation Bar */
+nav{
+    padding: 2% 6%;
+    justify-content: space-between;
+    display: flex;
+}
+nav img{
+    width: 150px;
+}
+/* Links & Menus */
+.links{
+    list-style: none;
+}
+.links ul li{
+    display: inline-block;
+    padding: 12px 12px;   
+}
+.links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15 px;
+    letter-spacing: 0.5px;    
+    position: relative;
+}
+.links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.links ul li a:hover::after{
+    width: 100%;        
+}
+.txt{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+.txt h1{
+    font-size: 62px;
+}
+.txt p{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 18px 0px 22px;
+    letter-spacing: 0.1px;
+}
+.txt-btn{
+    display: inline-block;
+    font-size: 17px;
+    padding: 12px 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+    text-decoration: none;
+}
+.txt-btn:hover{
+    background-color: #b7342a;
+    border: 1px solid #b7342a;
+    transition: 0.8s;
+}
+nav .fa{
+    display: none; 
+}
+
+/* Adding media queries to make the webpage responive */
+ 
+@media(max-width: 700px){
+    .txt h1{
+        font-size: 30px;
+    }
+    .links ul li{
+        display: block;
+        text-align: left ;
+    }
+    .links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 50%;
+        top: 0px;
+        right: 0px;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 12px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px;
+}
+.course h1{
+    font-size: 33px;
+}
+.course p{
+    font-size: 18px;
+    color: #777;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 10px;
+}
+.row{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between; 
+}
+.column{
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    padding: 20px 12px;
+    box-sizing: border-box; 
+    transition: 0.5s;
+}
+.column:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+    .course{
+        padding: 100px 0px;
+    }
+}
+
+/* ---campus--- */
+.campus{
+    width: 80%;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+.cam-column{
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+/* .cam-column img{
+    width: 100%; 
+} */
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.layer h2{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    opacity: 0;
+}
+.layer:hover h2{
+    opacity: 1;
+    bottom: 49%;
+}
+
+/* ---Facility--- */
+
+.facility{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    position: relative;
+}
+.faci-column{
+    flex-basis: 31%;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ---Footer--- */
+.footer{
+    width: 100%;
+    background-color: rgb(69, 69, 70);
+    margin: auto;
+    min-height: 35px;
+    color: rgb(223, 220, 220);
+}
+.footer p{
+    font-size: 18px;
+    text-align: center;
+    padding-top: 5px
+}
